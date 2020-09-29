@@ -1,0 +1,40 @@
+.dropdown .trigger {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown .trigger::after {
+    content: ">";
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    font-weight: bold;
+    transition: transform .3s;
+    transform: rotate(90deg) scale(.5, 1);
+    -webkit-transform: rotate(90deg) scale(.5, 1);
+    -moz-transform: rotate(90deg) scale(.5, 1);
+    -ms-transform: rotate(90deg) scale(.5, 1);
+    -o-transform: rotate(90deg) scale(.5, 1);
+    -webkit-transition: transform .3s;
+    -moz-transition: transform .3s;
+    -ms-transition: transform .3s;
+    -o-transition: transform .3s;
+}
+
+.dropdown .trigger.active::after {
+    transform: rotate(-90deg) scale(.5, 1);
+    -webkit-transform: rotate(-90deg) scale(.5, 1);
+    -moz-transform: rotate(-90deg) scale(.5, 1);
+    -ms-transform: rotate(-90deg) scale(.5, 1);
+    -o-transform: rotate(-90deg) scale(.5, 1);
+}
+
+.dropdown .content {
+    display: none;
+}
+
+.dropdown .content.active {
+    display: block;
+}
